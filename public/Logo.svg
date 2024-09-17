@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F9C995;}
+	.st1{fill:#C52026;}
+	.st2{fill:#DDDDDD;}
+	.st3{fill:#787878;}
+	.st4{fill:#FDC88D;}
+	.st5{fill:#2D2D2D;}
+	.st6{fill:#47C8F5;}
+	.st7{fill:none;}
+	.st8{fill:#BCBCBC;}
+	.st9{fill:#606161;}
+	.st10{fill:#F37B87;}
+	.st11{fill:#FFC613;}
+	.st12{fill:#FFFFFF;}
+	.st13{fill:#E2A538;}
+	.st14{fill:#FAE7D0;}
+	.st15{fill:#F3AE3D;}
+	.st16{fill:#81C341;}
+	.st17{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st18{opacity:0.3;}
+	.st19{opacity:0.3;fill:#FFFFFF;}
+</style>
+<g id="Vector">
+	<g>
+		<path class="st1" d="M44.01,61.92H20.19c-3.68,0-6.66-2.98-6.66-6.66V20.41c0-3.68,2.98-6.66,6.66-6.66h23.81
+			c3.68,0,6.66,2.98,6.66,6.66v34.85C50.67,58.93,47.68,61.92,44.01,61.92z"/>
+		<path class="st7" d="M20.89,20.7c0,0,9.7-41.88,21.07,0"/>
+		<polygon class="st12" points="44.76,33.79 44.76,41.86 36.14,41.86 36.14,50.49 28.06,50.49 28.06,41.86 19.44,41.86 19.44,33.79 
+			28.06,33.79 28.06,25.18 36.14,25.18 36.14,33.79 		"/>
+	</g>
+</g>
+<g id="Line">
+	<g>
+		<path class="st17" d="M44.01,61.92H20.19c-3.68,0-6.66-2.98-6.66-6.66V20.41c0-3.68,2.98-6.66,6.66-6.66h23.81
+			c3.68,0,6.66,2.98,6.66,6.66v34.85C50.67,58.93,47.68,61.92,44.01,61.92z"/>
+		<path class="st17" d="M20.89,20.7c0,0,9.7-41.88,21.07,0"/>
+		<polygon class="st17" points="44.76,33.79 44.76,41.86 36.14,41.86 36.14,50.49 28.06,50.49 28.06,41.86 19.44,41.86 19.44,33.79 
+			28.06,33.79 28.06,25.18 36.14,25.18 36.14,33.79 		"/>
+	</g>
+</g>
+<g id="shadow">
+	<path class="st18" d="M50.67,55.25V20.41c0-3.68-3.72-6.66-8.3-6.66h-0.3c1.06,1.37,3.06,3.14,3.53,3.94
+		c1,1.69,1.98,3.78,1.98,5.68c0,0,0,24.92,0,37.07C49.46,59.22,50.67,57.35,50.67,55.25z"/>
+</g>
+<g id="Highligth">
+	<path class="st19" d="M13.53,55.25V20.41c0-3.68,3.72-6.66,8.3-6.66h0.3c-1.06,1.37-3.06,3.14-3.53,3.94
+		c-1,1.69-1.98,3.78-1.98,5.68c0,0,0,24.92,0,37.07C14.74,59.22,13.53,57.35,13.53,55.25z"/>
+</g>
+</svg>

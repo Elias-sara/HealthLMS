@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+@layer base {
+  :root {
+    --background: #d3cccc93; /* Light Mode Background */
+    --foreground: #000000; /* Light Mode Foreground */
+    --card: #ffffff; /* Card Background */
+    --card-foreground: #171717; /* Card Foreground */
+    --popover: #ffffff; /* Popover Background */
+    --popover-foreground: #171717; /* Popover Foreground */
+    --primary: #9e34dc; /* Primary Color */
+    --primary-foreground: #ffffff; /* Primary Foreground */
+    --secondary: #f6e05e; /* Secondary Color */
+    --secondary-foreground: #2d3748; /* Secondary Foreground */
+    --muted: #e2e8f0; /* Muted Color */
+    --muted-foreground: #4a5568; /* Muted Foreground */
+    --accent: #38b2ac; /* Accent Color */
+    --accent-foreground: #ffffff; /* Accent Foreground */
+    --destructive: #e53e3e; /* Destructive Color */
+    --destructive-foreground: #ffffff; /* Destructive Foreground */
+    --border: #cbd5e0; /* Border Color */
+    --input: #edf2f7; /* Input Color */
+    --ring: #bee3f8; /* Ring Color */
+    --chart-1: #6b46c1; /* Chart Color 1 */
+    --chart-2: #d53f8c; /* Chart Color 2 */
+    --chart-3: #ed8936; /* Chart Color 3 */
+    --chart-4: #48bb78; /* Chart Color 4 */
+    --chart-5: #4299e1; /* Chart Color 5 */
+    --radius: 0.5rem; /* Border Radius */
+  }
+
+  /* Dark Mode Styles */
+  .dark {
+    --background: #0a0a0a; /* Dark Mode Background */
+    --foreground: #ededed; /* Dark Mode Foreground */
+    --card: #0a0a0a; /* Dark Mode Card Background */
+    --card-foreground: #ededed; /* Dark Mode Card Foreground */
+    --popover: #0a0a0a; /* Dark Mode Popover Background */
+    --popover-foreground: #ededed; /* Dark Mode Popover Foreground */
+    --primary: #ffffff; /* Dark Mode Primary Color */
+    --primary-foreground: #171717; /* Dark Mode Primary Foreground */
+    --secondary: #3b3b3b; /* Dark Mode Secondary Color */
+    --secondary-foreground: #ededed; /* Dark Mode Secondary Foreground */
+    --muted: #3b3b3b; /* Dark Mode Muted Color */
+    --muted-foreground: #ededed; /* Dark Mode Muted Foreground */
+    --accent: #3b3b3b; /* Dark Mode Accent Color */
+    --accent-foreground: #ededed; /* Dark Mode Accent Foreground */
+    --destructive: #e53e3e; /* Dark Mode Destructive Color */
+    --destructive-foreground: #ffffff; /* Dark Mode Destructive Foreground */
+    --border: #3b3b3b; /* Dark Mode Border Color */
+    --input: #3b3b3b; /* Dark Mode Input Color */
+    --ring: #4a4a4a; /* Dark Mode Ring Color */
+    --chart-1: #d2b4de; /* Dark Mode Chart Color 1 */
+    --chart-2: #9fd3c7; /* Dark Mode Chart Color 2 */
+    --chart-3: #f7c6c7; /* Dark Mode Chart Color 3 */
+    --chart-4: #e2c8d3; /* Dark Mode Chart Color 4 */
+    --chart-5: #e3d0eb; /* Dark Mode Chart Color 5 */
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Global Styles */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
