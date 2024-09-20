@@ -1,16 +1,4 @@
 "use client";
-// import React from "react";
-
-// function VideoPlayer({ videoUrl }) {
-//   return (
-//     <video width={1000} height={250} controls className="rounded-sm">
-//       <source src={videoUrl} type="video/mp4" />{" "}
-//       {/* src={`https://www.youtube.com/embed/${new URL( */}
-//     </video>
-//   );
-// }
-
-// export default VideoPlayer;
 import React from "react";
 
 function VideoPlayer({ videoUrl }) {
