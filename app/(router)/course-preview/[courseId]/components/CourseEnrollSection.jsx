@@ -7,21 +7,21 @@ function CourseEnrollSection({ courseInfo }) {
   const membership = false;
   const { user } = useUser();
 
-  const router=useRoute();
+  const router = useRoute();
   //Enroll to the Course
-  const onEnrollCourse=()=>{
-    GlobalApi.enrollToCourse(courseInfo?.slug.user?.primaryEmailAddress?.emailAddress)
-    .then(resp=>{
+  const onEnrollCourse = () => {
+    GlobalApi.enrollToCourse(
+      courseInfo?.slug.user?.primaryEmailAddress?.emailAddress
+    ).then((resp) => {
       console.log(resp);
-      if (resp)
-      {
-        //show toast on successfull enroll
+      if (resp) {
+        //show toast on successful enroll
 
         //redirect to watch course
         router.push("/watch-course/" + resp.createUserEnrolledCourse.id);
       }
-    })
-  }
+    });
+  };
   return (
     <div className="p-3 text-center rounded-sm bg-primary ">
       <h2 className="text-[20px] font-bold text-white">Enroll to the Course</h2>
@@ -34,7 +34,8 @@ function CourseEnrollSection({ courseInfo }) {
           <Button
             className="bg-white text-primary hover:bg-white
     hover:text-primary"
-          onClick={()=>onEnrollCourse()}>
+            onClick={() => onEnrollCourse()}
+          >
             Enroll Now
           </Button>
         </div>

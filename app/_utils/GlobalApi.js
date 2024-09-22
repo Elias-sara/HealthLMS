@@ -133,6 +133,13 @@ const enrollToCourse = async (courseId, email) => {
       ) {
         id
       }
+          publishManyUserEnrolledCoursesConnection {
+    edges {
+      node {
+        id
+      }
+    }
+  }
     }
   `;
   const result = await request(MASTER_URL, query);
@@ -143,5 +150,5 @@ export default {
   getAllCourseList,
   getSideBanner,
   getCourseById,
-  enrollToCourse
+  enrollToCourse,
 };
