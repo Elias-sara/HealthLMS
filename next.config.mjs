@@ -2,7 +2,14 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ["us-west-2.graphassets.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "us-west-2.graphassets.com", // Your domain
+        port: "", // Leave empty unless you have a specific port
+        pathname: "/**", // Matches any path under the domain
+      },
+    ],
   },
 };
 

@@ -1,3 +1,4 @@
+"use client";
 import GlobalApi from "@/app/_utils/GlobalApi";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -32,7 +33,7 @@ function SideBanners() {
 
   if (loading) {
     return (
-      <div>
+      <div className="hidden md:block">
         {[1, 2, 3, 4, 5, 6].map((_, index) => (
           <div
             key={index}
@@ -46,7 +47,7 @@ function SideBanners() {
   }
 
   return (
-    <div>
+    <div className="hidden md:block">
       {sideBannerList.length > 0 ? (
         sideBannerList.map((item, index) => (
           <div

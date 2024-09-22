@@ -15,12 +15,12 @@ function Layout({ children }) {
   return (
     <div className="flex flex-col h-screen">
       {/* Mobile Toggle Button */}
-      <button
-        onClick={toggleSideNav}
-        className="md:hidden p-4 fixed top-0 left-0 bg-primary text-white z-50"
-      >
-        <Menu />
-      </button>
+      {/* <button */}
+        {/* onClick={toggleSideNav} */}
+        {/* className="md:hidden p-4 fixed top-0 left-0 bg-primary text-white z-50" */}
+      {/* > */}
+        {/* <Menu /> */}
+      {/* </button> */}
 
       {/* SideNav for larger screens */}
       <div
