@@ -1,4 +1,5 @@
-"use client"; // Ensure this is at the very top
+"use client";
+ // Ensure this is at the very top
 import { SignedIn, UserButton, useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";

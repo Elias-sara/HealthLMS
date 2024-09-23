@@ -1,4 +1,5 @@
-"use client"; // Mark this file as a Client Component
+"use client"; 
+// Mark this file as a Client Component
 
 import React, { useState } from "react";
 import SideNav from "./_components/SideNav";

@@ -1,20 +1,22 @@
 import GlobalApi from "@/app/_utils/GlobalApi";
 import { Button } from "@/components/ui/button";
-import { useUser } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs"; // Uncommented
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 import { toast } from "sonner";
 
 function CourseEnrollSection({ courseInfo, isUserAlreadyEnrolled }) {
-  const membership = false;
-  const { user } = useUser();
+  const membership = false; // Placeholder for membership status
+  const { user } = useUser(); // Get the user object
 
   const router = useRouter();
+
   useEffect(() => {
     console.log("isUserAlreadyEnrolled", isUserAlreadyEnrolled);
-  }, []);
-  //Enroll to the Course
+  }, [isUserAlreadyEnrolled]);
+
+  // Enroll to the Course
   const onEnrolledCourse = () => {
     if (!user) {
       console.error("User not logged in.");
@@ -44,18 +46,17 @@ function CourseEnrollSection({ courseInfo, isUserAlreadyEnrolled }) {
   };
 
   return (
-    <div className="p-3 text-center rounded-sm bg-primary ">
+    <div className="p-3 text-center rounded-sm bg-primary">
       <h2 className="text-[20px] font-bold text-white">Enroll to the Course</h2>
-      {/* Use has Membership and Already login */}
+      {/* Check for user and membership status */}
       {user && (membership || courseInfo.free) ? (
         <div className="flex flex-col gap-3 mt-3">
           <h2 className="text-white font-light">
             Enroll Now to start Learning and Building the project
           </h2>
           <Button
-            className="bg-white text-primary hover:bg-white
-    hover:text-primary"
-            onClick={() => onEnrolledCourse()}
+            className="bg-white text-primary hover:bg-white hover:text-primary"
+            onClick={onEnrolledCourse}
           >
             Enroll Now
           </Button>
@@ -66,10 +67,7 @@ function CourseEnrollSection({ courseInfo, isUserAlreadyEnrolled }) {
             Enroll Now to start Learning and Building the project
           </h2>
           <Link href={"/sign-in"}>
-            <Button
-              className="bg-white text-primary hover:bg-white
-    hover:text-primary"
-            >
+            <Button className="bg-white text-primary hover:bg-white hover:text-primary">
               Enroll Now
             </Button>
           </Link>
@@ -79,15 +77,11 @@ function CourseEnrollSection({ courseInfo, isUserAlreadyEnrolled }) {
           <h2 className="text-white font-light">
             Buy Monthly Membership and Get Access To All Courses
           </h2>
-          <Button
-            className="bg-white text-primary hover:bg-white
-    hover:text-primary"
-          >
+          <Button className="bg-white text-primary hover:bg-white hover:text-primary">
             Buy Membership Just $2.99
           </Button>
         </div>
       )}
-      {/* About Section User Does not Membership or not Signup/Login */}
     </div>
   );
 }
