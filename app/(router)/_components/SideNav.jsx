@@ -20,42 +20,42 @@ const SideNav = () => {
       id: 6,
       name: "Dashboard",
       icon: LayoutDashboard,
-      path: "/dashboard", // Add path for navigation
+      path: "/dashboard",
       auth: user,
     },
     {
       id: 1,
       name: "All Courses",
       icon: BookOpen,
-      path: "/courses", // Add path for navigation
+      path: "/courses",
       auth: true,
     },
     {
       id: 2,
       name: "Membership",
       icon: BadgeIcon,
-      path: "/membership", // Add path for navigation
+      path: "/membership",
       auth: true,
     },
     {
       id: 3,
       name: "Be Instructor",
       icon: GraduationCap,
-      path: "/be-instructor", // Add path for navigation
+      path: "/be-instructor",
       auth: true,
     },
     {
       id: 4,
       name: "Store",
       icon: Store,
-      path: "/store", // Add path for navigation
+      path: "/store",
       auth: true,
     },
     {
       id: 5,
       name: "Newsletter",
       icon: Mail,
-      path: "/newsletter", // Add path for navigation
+      path: "/newsletter",
       auth: true,
     },
   ];
@@ -71,12 +71,11 @@ const SideNav = () => {
       <Image src="/Logo6.svg" alt="logo" width={40} height={40} />
       <span className="text-xl font-semibold">Contents</span>
       <hr className="my-5" />
-      {/* Menu List */}
       <div className="mt-5">
         {menu.map(
-          (item, index) =>
+          (item) =>
             item.auth && (
-              <Link href={item.path}>
+              <Link key={item.id} href={item.path}>
                 <div
                   className={`group flex gap-3 mt-2 p-3 text-[18px] items-center text-gray-500 cursor-pointer hover:bg-primary hover:text-white rounded-md transition-all ease-in-out duration-200
                 ${path === item.path ? "bg-primary text-white" : ""}`}

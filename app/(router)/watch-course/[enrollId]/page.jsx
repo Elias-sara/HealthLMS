@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function WatchCourse() {
-  return (
-    <div>page</div>
-  )
+  return <div>WatchCourse</div>;
 }
 
 export default WatchCourse;

@@ -1,27 +1,48 @@
+import GlobalApi from "@/app/_utils/GlobalApi";
 import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/nextjs";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
+import { toast } from "sonner";
 
-function CourseEnrollSection({ courseInfo }) {
+function CourseEnrollSection({ courseInfo, isUserAlreadyEnrolled }) {
   const membership = false;
   const { user } = useUser();
 
-  const router = useRoute();
+  const router = useRouter();
+  useEffect(() => {
+    console.log("isUserAlreadyEnrolled", isUserAlreadyEnrolled);
+  }, []);
   //Enroll to the Course
-  const onEnrollCourse = () => {
-    GlobalApi.enrollToCourse(
-      courseInfo?.slug.user?.primaryEmailAddress?.emailAddress
-    ).then((resp) => {
-      console.log(resp);
-      if (resp) {
-        //show toast on successful enroll
+  const onEnrolledCourse = () => {
+    if (!user) {
+      console.error("User not logged in.");
+      return;
+    }
+    const courseId = courseInfo?.slug;
+    const userEmail = user?.primaryEmailAddress?.emailAddress;
 
-        //redirect to watch course
-        router.push("/watch-course/" + resp.createUserEnrolledCourse.id);
-      }
-    });
+    if (!courseId || !userEmail) {
+      console.error("Course ID or User Email is undefined.");
+      return;
+    }
+
+    GlobalApi.enrollToCourse(courseId, userEmail)
+      .then((resp) => {
+        if (resp?.createUserEnrolledCourse?.id) {
+          toast.success("Successfully enrolled in the course!");
+          router.push("/watch-course/" + resp.createUserEnrolledCourse.id);
+        } else {
+          toast.error("Enrollment failed. Please try again.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error enrolling in course:", error);
+        toast.error("An error occurred: " + error.message);
+      });
   };
+
   return (
     <div className="p-3 text-center rounded-sm bg-primary ">
       <h2 className="text-[20px] font-bold text-white">Enroll to the Course</h2>
@@ -34,7 +55,7 @@ function CourseEnrollSection({ courseInfo }) {
           <Button
             className="bg-white text-primary hover:bg-white
     hover:text-primary"
-            onClick={() => onEnrollCourse()}
+            onClick={() => onEnrolledCourse()}
           >
             Enroll Now
           </Button>

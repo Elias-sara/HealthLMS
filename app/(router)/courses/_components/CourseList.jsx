@@ -1,4 +1,3 @@
-"use client";
 import GlobalApi from "@/app/_utils/GlobalApi";
 import React, { useEffect, useState } from "react";
 import {
@@ -9,7 +8,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import CourseItem from "./CourseItem";
-// import { Link } from "lucide-react";
 import Link from "next/link";
 
 function CourseList() {
@@ -20,8 +18,8 @@ function CourseList() {
     const fetchCourses = async () => {
       try {
         const result = await GlobalApi.getAllCourseList();
-        console.log("Fetched Courses:", result); // Ensure this logs correctly
-        setCourseList(result); // Adjust if the shape is different
+        console.log("Fetched Courses:", result);
+        setCourseList(result);
       } catch (error) {
         console.error("Error fetching courses:", error);
       } finally {
@@ -38,7 +36,6 @@ function CourseList() {
 
   return (
     <div className="p-5 bg-white rounded-lg mt-5">
-      {/* Title and Filter */}
       <div className="flex items-center justify-between">
         <h2 className="text-[20px] font-bold text-primary">All Courses</h2>
         <Select>
@@ -53,16 +50,15 @@ function CourseList() {
         </Select>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 mt-4">
-        {/* Display Course List */}
         {courseList.length > 0
-          ? courseList.map((item,index) => (
-              <Link href={'/course-preview/'+item.slug}>
-                <div key={index}>
+          ? courseList.map((item) => (
+              <Link key={item.id} href={`/course-preview/${item.slug}`}>
+                <div>
                   <CourseItem course={item} />
                 </div>
               </Link>
             ))
-          : [1, 2, 3, 4, 5, 6, 7].map((item,index) => (
+          : [1, 2, 3, 4, 5, 6, 7].map((_, index) => (
               <div
                 key={index}
                 className="w-full h-[240px] rounded-xl m-2 bg-slate-200 animate-pulse"
