@@ -21,7 +21,7 @@ const SideNav = () => {
       name: "Dashboard",
       icon: LayoutDashboard,
       path: "/dashboard",
-      auth: user,
+      auth: true,
     },
     {
       id: 1,
